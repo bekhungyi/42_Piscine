@@ -1,3 +1,12 @@
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+
+int	main()
+{
+	char src[] = "hi";
+	char dest[] = "hello";
+	unsigned int n = 4;
+	ft_strncpy(dest, src, n);
+	printf("%s", dest);
+}

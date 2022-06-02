@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 20:16:05 by bhung-yi          #+#    #+#             */
-/*   Updated: 2022/06/02 16:46:09 by bhung-yi         ###   ########.fr       */
+/*   Created: 2022/06/02 18:00:18 by bhung-yi          #+#    #+#             */
+/*   Updated: 2022/06/02 19:58:30 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strcapitalize(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((src[i]) && (i < n))
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if (i == 0 || str[i -1] == ' ' || )
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+				str[i] -= 32;
+				i++;
+		}
+		else if ()
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+				str[i] -= 32;
+				i++;
+		}
+		else
+			i++;
 	}
-	while ((dest[i]) && (i < n))
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (str);
 }
