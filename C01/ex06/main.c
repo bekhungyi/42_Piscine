@@ -4,7 +4,7 @@ int		ft_strlen(char *str);
 
 int		main (void)
 {
-	char str[] = "Lorem ipsum sit amet consectetur adipisicing elit Blanditiis delectus";
+	char str[] = "hello";
 
 	int count = ft_strlen(str);
 	
