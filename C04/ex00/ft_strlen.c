@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 22:40:50 by bhung-yi          #+#    #+#             */
-/*   Updated: 2022/06/04 19:09:00 by bhung-yi         ###   ########.fr       */
+/*   Created: 2022/06/04 15:51:37 by bhung-yi          #+#    #+#             */
+/*   Updated: 2022/06/04 15:52:28 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i]) && (s2[i] == s1[i]) && i < n)
-	{
+	while (str[i])
 		i++;
-	}
-	return (*s1 - *s2);
+	return (i);
 }

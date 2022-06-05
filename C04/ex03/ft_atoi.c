@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 22:40:50 by bhung-yi          #+#    #+#             */
-/*   Updated: 2022/06/04 19:09:00 by bhung-yi         ###   ########.fr       */
+/*   Created: 2022/06/05 12:36:27 by bhung-yi          #+#    #+#             */
+/*   Updated: 2022/06/05 14:45:13 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_atoi(char *str)
 {
-	unsigned int	i;
+	int	c;
+	int	sign;
+	int	nbr;
 
-	i = 0;
-	while ((s1[i]) && (s2[i] == s1[i]) && i < n)
+	c = 0;
+	sign = 1;
+	nbr = 0;
+	while (str[c] == ' ' || (str[c] >= '\t' && str [c] <= '\r'))
+		c++;
+	while (str[c] == '+' || str[c] == '-')
 	{
-		i++;
+		if (str[c] == '-')
+			sign *= -1;
+		c++;
 	}
-	return (*s1 - *s2);
+	while (str[c] >= '0' && str[c] <= '9')
+	{
+		nbr = (str[c] - '0') + (nbr * 10);
+		c++;
+	}
+	return (nbr * sign);
 }

@@ -4,9 +4,9 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int	main(void)
 {
-	unsigned int n = 4;
-	char s1[] = {"123446"};
-	char s2[] = {"123458"};
+	unsigned int n = 3;
+	char s1[] = {"12345"};
+	char s2[] = {"12245"};
 
 	if (ft_strncmp(s1, s2, n) < 0)
 		write (1, "s1 less", 7);
